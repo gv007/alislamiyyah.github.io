@@ -1,0 +1,137 @@
+@media screen and (max-width: 600px) {
+    .navbar {
+		padding: 10px 0;
+	  }
+}
+
+a {
+	text-decoration: none;
+}  
+
+.navbar {
+    position: relative;
+    z-index: 9999; /* Nilai z-index yang tinggi */
+}
+
+.marquee {
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+  }
+  
+  .marquee span {
+	display: inline-block;
+	padding-left: 100%;
+	animation: marquee 9s linear infinite;
+  }
+  
+  @keyframes marquee {
+	0%   { transform: translateX(200%); }
+	100% { transform: translateX(-100%); }
+  }
+  
+.our-program-main {
+	width: 100%;
+	height: auto;
+	border-bottom: 5px #007423 solid;
+	background: #fff;
+	text-align: center;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+	transition: 0.7s;
+	margin-bottom: 32px;
+}
+
+.our-program-main img {
+	border-radius: 50%;
+	margin-bottom: 20px;
+	width: 90px;
+}
+
+.our-program-main h3 {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.our-program-main p {
+	margin-bottom: 0;
+}
+
+.program-back {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 5px 15px 0 15px;
+	text-align: left;
+	background: #fff;
+	
+}
+
+.program-front {
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index: 10;
+	background: #fff;
+	padding: 15px;
+	bottom: 0px;
+	transition: all 0.5s ease;
+}
+
+.our-program-main:hover .program-front {
+	bottom: -200px;
+	transition: all 0.5s ease;
+}
+
+.our-program-main:hover {
+	border-color: #777;
+	transition: 0.5s;
+}
+
+@keyframes float {
+	0% { transform: translateY(0); }
+	50% { transform: translateY(-5px); }
+	100% { transform: translateY(0); }
+}
+
+.col-md-6 {
+	margin-bottom: 20px;
+}
+
+.floating-img {
+	transition: transform 0.3s;
+}
+
+.floating-img:hover {
+	animation: float 1s infinite;
+}
+
+/* Style untuk tombol Daftar */
+.card {
+	position: relative;
+}
+
+.card-img-overlay {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	text-align: center;
+	opacity: 0.2;
+	transition: opacity 0.3s;
+}
+
+.card:hover .card-img-overlay {
+	opacity: 1;
+}
