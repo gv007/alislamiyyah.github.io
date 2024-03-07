@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://alislamiyyah.smpgunungjati2.sch.id/sitemap.xml
