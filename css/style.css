@@ -41,7 +41,7 @@ a {
     display: flex;
     flex-direction: column; /* Tata letak atas-bawah pada tampilan seluler */
     justify-content: center; /* Posisi teks di tengah */
-    text-align: center; /* Teks di tengah */
+    text-align: left; /* Teks di tengah */
     height: 90%; /* Agar kartu memiliki tinggi penuh */
   }
   
