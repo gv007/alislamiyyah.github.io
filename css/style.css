@@ -1,117 +1,199 @@
-@media screen and (max-width: 600px) {
-    .navbar {
-		padding: 10px 0;
-	  }
-}
 
 a {
 	text-decoration: none;
-}  
+}
 
 .navbar {
-    position: relative;
-    z-index: 9999;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+
+.navbar.fixed-top {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* adjust as needed */
+}
   
-  .navbar-brand {
+.navbar-brand {
 	display: flex;
 	align-items: center;
 }
+
+/* Pembuka */
+.container-pembuka {
+    display: grid;
+    grid-template-columns: 1fr; /* Tata letak satu kolom pada tampilan seluler */
+    gap: 20px; /* Jarak antara grid item */
+  }
   
-.marquee {
-	width: 100%;
-	overflow: hidden;
-	white-space: nowrap;
-}
+  @media screen and (min-width: 768px) {
+    .container-pembuka {
+      grid-template-columns: 1fr 1fr; /* Tata letak dua kolom pada tampilan desktop */
+    }
+  }
   
-  .marquee span {
-	display: inline-block;
-	padding-left: 100%;
-	animation: marquee 9s linear infinite;
-}
+  .container-pembuka > div {
+    padding: 20px; /* Padding untuk konten di dalam grid item */
+  }
   
-  @keyframes marquee {
-	0%   { transform: translateX(200%); }
-	100% { transform: translateX(-100%); }
-}
+  .card {
+    display: flex;
+    flex-direction: column; /* Tata letak atas-bawah pada tampilan seluler */
+    justify-content: center; /* Posisi teks di tengah */
+    text-align: center; /* Teks di tengah */
+    height: 90%; /* Agar kartu memiliki tinggi penuh */
+  }
   
-.our-program-main {
-	width: 100%;
-	height: auto;
-	border-bottom: 5px #007423 solid;
-	background: #fff;
-	text-align: center;
-	border-radius: 10px;
-	overflow: hidden;
-	position: relative;
-	transition: 0.7s;
-	margin-bottom: 32px;
+  .teks-pembuka {
+    margin-top: 20px; /* Jarak antara grid item */
+    position: relative;
+  }  
+
+  .teks-pembuka::before {
+    content: "“"; /* Tanda petik besar sebelum teks */
+    display: inline-block; /* Menjadikan tanda petik sebagai elemen inline block */
+    vertical-align: middle; /* Menyelaraskan vertikal dengan teks */
+    margin-right: 0.5em; /* Jarak antara tanda petik dan teks */
+    font-size: 150px; /* Ukuran tanda petik */
+    transform: translateY(-50%);
+    position: absolute;
+    color: #a0a0a0;
+  }
+  
+/* Tujuan */
+.container-tujuan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	flex-wrap: wrap;
 }
 
-.our-program-main img {
-	border-radius: 50%;
-	margin-bottom: 20px;
-	width: 90px;
+.container.tujuan-teks {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Jarak antara gambar dan teks */
 }
 
-.our-program-main h3 {
-	font-size: 20px;
-	font-weight: 700;
+@media screen and (max-width: 768px) {
+    .tujuan-teks {
+        margin-left: 5px; /* Mengurangi margin saat layar lebih kecil */
+    }
 }
 
-.our-program-main p {
-	margin-bottom: 0;
+ul {
+    margin-left: 20px; /* Jarak antara ikon dan teks */
 }
 
-.program-back {
-	width: 100%;
-	height: auto;
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 5px 15px 0 15px;
-	text-align: left;
-	background: #fff;
+/* Atur lebar gambar agar tetap proporsional */
+img {
+    height: auto;
+    max-width: 300px;
 }
 
-.program-front {
-	width: 100%;
-	height: auto;
-	position: relative;
-	z-index: 10;
-	background: #fff;
-	padding: 15px;
-	bottom: 0px;
-	transition: all 0.5s ease;
+/* Program */
+.container-kegiatan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	flex-wrap: wrap;
 }
 
-.our-program-main:hover .program-front {
-	bottom: -200px;
-	transition: all 0.5s ease;
+.container-program {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
-.our-program-main:hover {
-	border-color: #777;
-	transition: 0.5s;
+.program-item {
+    padding: 20px;
+    border-radius: 5px;
 }
 
-@keyframes float {
-	0% { transform: translateY(0); }
-	50% { transform: translateY(-5px); }
-	100% { transform: translateY(0); }
+.program-item h3 {
+    margin-top: 0;
 }
 
-.col-md-6 {
-	margin-bottom: 20px;
+.program-item p {
+    margin-bottom: 0;
 }
 
-.floating-img {
-	transition: transform 0.3s;
+/* Kegiatan */
+.kegiatan-teks {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Jarak antara gambar dan teks */
 }
 
-.floating-img:hover {
-	animation: float 1s infinite;
+@media screen and (max-width: 768px) {
+    .kegiatan-teks {
+        margin-left: 5px; /* Mengurangi margin saat layar lebih kecil */
+    }
 }
+
+ul {
+    margin-left: 20px; /* Jarak antara ikon dan teks */
+}
+
+/* Atur lebar gambar agar tetap proporsional */
+img {
+    height: auto;
+    max-width: 300px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  
+  .btn-primary::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+  }
+  
+  .btn-primary:hover::before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .btn-primary:hover {
+    color: #007bff;
+    background-color: #fff;
+  }
+
+/* Untuk layar berukuran kecil (<= 576px) */
+@media (max-width: 576px) {
+    /* Tambahkan aturan CSS untuk layar kecil di sini */
+}
+
+/* Untuk layar berukuran sedang (577px - 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+    /* Tambahkan aturan CSS untuk layar sedang di sini */
+}
+
+/* Untuk layar berukuran besar (> 768px) */
+@media (min-width: 769px) {
+    /* Tambahkan aturan CSS untuk layar besar di sini */
+}
+
+
+
+
