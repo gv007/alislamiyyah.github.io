@@ -56,7 +56,7 @@ a {
     vertical-align: middle; /* Menyelaraskan vertikal dengan teks */
     margin-right: 0.5em; /* Jarak antara tanda petik dan teks */
     font-size: 150px; /* Ukuran tanda petik */
-    transform: translateY(-50%);
+    transform: translateY(-47%);
     position: absolute;
     color: #a0a0a0;
   }
@@ -92,13 +92,6 @@ img {
 }
 
 /* Program */
-.container-kegiatan {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	flex-wrap: wrap;
-}
-
 .container-program {
     max-width: 800px;
     margin: 0 auto;
@@ -108,6 +101,7 @@ img {
 .program-item {
     padding: 20px;
     border-radius: 5px;
+    text-align: left;
 }
 
 .program-item h3 {
@@ -119,6 +113,13 @@ img {
 }
 
 /* Kegiatan */
+.container-kegiatan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	flex-wrap: wrap;
+}
+
 .kegiatan-teks {
     display: flex;
     align-items: center;
