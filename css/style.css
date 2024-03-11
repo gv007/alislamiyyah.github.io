@@ -21,7 +21,42 @@ body {
   animation: move 1s ease-in-out infinite alternate;
 }
 
+.btn-success {
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s, background-color 0.3s;
+}
 
+.btn-success::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+.btn-success:hover::before {
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+}
+
+.btn-success:hover {
+  color: #007bff;
+  background-color: #fff;
+}
+
+/* Navbar */
 .navbar {
 	display: flex;
 	justify-content: center;
@@ -152,44 +187,6 @@ img {
     height: auto;
     max-width: 300px;
 }
-
-.btn-primary {
-    background-color: #007bff;
-    color: #fff;
-    border: 2px solid #007bff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s, background-color 0.3s;
-  }
-  
-  .btn-primary::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
-    border-radius: 50%;
-    z-index: 0;
-    transform: translate(-50%, -50%);
-  }
-  
-  .btn-primary:hover::before {
-    width: 0;
-    height: 0;
-    top: 50%;
-    left: 50%;
-  }
-  
-  .btn-primary:hover {
-    color: #007bff;
-    background-color: #fff;
-  }
 
 /* Untuk layar berukuran kecil (<= 576px) */
 @media (max-width: 576px) {
