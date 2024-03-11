@@ -96,12 +96,8 @@ body {
 
 @media screen and (max-width: 768px) {
     .tujuan-teks {
-        margin-left: 5px; /* Mengurangi margin saat layar lebih kecil */
+        margin-left: 3px; /* Mengurangi margin saat layar lebih kecil */
     }
-}
-
-ul {
-    margin-left: 20px; /* Jarak antara ikon dan teks */
 }
 
 /* Atur lebar gambar agar tetap proporsional */
@@ -149,10 +145,6 @@ img {
     .kegiatan-teks {
         margin-left: 3px; /* Mengurangi margin saat layar lebih kecil */
     }
-}
-
-ul {
-    margin-left: 20px; /* Jarak antara ikon dan teks */
 }
 
 /* Atur lebar gambar agar tetap proporsional */
