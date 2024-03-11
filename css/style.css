@@ -3,6 +3,25 @@ a {
 	text-decoration: none;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Animasi tombol */
+@keyframes move {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(10px); /* Atur jarak naik turun */
+  }
+}
+
+.btn-success {
+  animation: move 1s ease-in-out infinite alternate;
+}
+
+
 .navbar {
 	display: flex;
 	justify-content: center;
@@ -58,9 +77,9 @@ a {
     font-size: 150px; /* Ukuran tanda petik */
     transform: translateY(-47%);
     position: absolute;
-    color: #a0a0a0;
+    color: #000;
   }
-  
+
 /* Tujuan */
 .container-tujuan {
     display: flex;
