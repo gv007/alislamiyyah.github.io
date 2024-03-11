@@ -147,7 +147,7 @@ img {
 
 @media screen and (max-width: 768px) {
     .kegiatan-teks {
-        margin-left: 5px; /* Mengurangi margin saat layar lebih kecil */
+        margin-left: 3px; /* Mengurangi margin saat layar lebih kecil */
     }
 }
 
