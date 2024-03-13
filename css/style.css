@@ -1,208 +1,234 @@
 
 a {
-	text-decoration: none;
+text-decoration: none;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Animasi tombol */
-@keyframes move {
-  0%, 100% {
-      transform: translateY(0);
-  }
-  50% {
-      transform: translateY(10px); /* Atur jarak naik turun */
-  }
-}
-
-.btn-success {
-  animation: move 1s ease-in-out infinite alternate;
-}
-
-.btn-success {
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  transition: color 0.3s, background-color 0.3s;
-}
-
-.btn-success::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
-  border-radius: 50%;
-  z-index: 0;
-  transform: translate(-50%, -50%);
-}
-
-.btn-success:hover::before {
-  width: 0;
-  height: 0;
-  top: 50%;
-  left: 50%;
-}
-
-.btn-success:hover {
-  color: #007bff;
-  background-color: #fff;
+font-family: 'Poppins', sans-serif;
 }
 
 /* Navbar */
 .navbar {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .navbar.fixed-top {
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* adjust as needed */
+position: sticky;
+top: 0;
+z-index: 1000; /* adjust as needed */
 }
-  
+
 .navbar-brand {
-	display: flex;
-	align-items: center;
+display: flex;
+align-items: center;
 }
 
 /* Pembuka */
 .container-pembuka {
-    display: grid;
-    grid-template-columns: 1fr; /* Tata letak satu kolom pada tampilan seluler */
-    gap: 20px; /* Jarak antara grid item */
-  }
-  
-  @media screen and (min-width: 768px) {
-    .container-pembuka {
-      grid-template-columns: 1fr 1fr; /* Tata letak dua kolom pada tampilan desktop */
-    }
-  }
-  
-  .container-pembuka > div {
-    padding: 20px; /* Padding untuk konten di dalam grid item */
-  }
-  
-  .card {
-    display: flex;
-    flex-direction: column; /* Tata letak atas-bawah pada tampilan seluler */
-    justify-content: center; /* Posisi teks di tengah */
-    text-align: left; /* Teks di tengah */
-    height: 90%; /* Agar kartu memiliki tinggi penuh */
-  }
-  
-  .teks-pembuka {
-    margin-top: 20px; /* Jarak antara grid item */
-    position: relative;
-  }  
+display: grid;
+grid-template-columns: 1fr; /* Tata letak satu kolom pada tampilan seluler */
+gap: 20px; /* Jarak antara grid item */
+}
 
-  .teks-pembuka::before {
-    content: "“"; /* Tanda petik besar sebelum teks */
-    display: inline-block; /* Menjadikan tanda petik sebagai elemen inline block */
-    vertical-align: middle; /* Menyelaraskan vertikal dengan teks */
-    margin-right: 0.5em; /* Jarak antara tanda petik dan teks */
-    font-size: 150px; /* Ukuran tanda petik */
-    transform: translateY(-47%);
-    position: absolute;
-    color: #fff;
-  }
+@media screen and (min-width: 768px) {
+.container-pembuka {
+  grid-template-columns: 1fr 1fr; /* Tata letak dua kolom pada tampilan desktop */
+}
+}
+
+.container-pembuka > div {
+padding: 20px; /* Padding untuk konten di dalam grid item */
+}
+
+.card {
+display: flex;
+flex-direction: column; /* Tata letak atas-bawah pada tampilan seluler */
+justify-content: center; /* Posisi teks di tengah */
+text-align: left; /* Teks di tengah */
+height: 90%; /* Agar kartu memiliki tinggi penuh */
+}
+
+.teks-pembuka {
+margin-top: 20px; /* Jarak antara grid item */
+position: relative;
+}  
+
+.teks-pembuka::before {
+content: "“"; /* Tanda petik besar sebelum teks */
+display: inline-block; /* Menjadikan tanda petik sebagai elemen inline block */
+vertical-align: middle; /* Menyelaraskan vertikal dengan teks */
+margin-right: 0.5em; /* Jarak antara tanda petik dan teks */
+font-size: 150px; /* Ukuran tanda petik */
+transform: translateY(-47%);
+position: absolute;
+color: #fff;
+}
+
+/* Animasi tombol */
+@keyframes move {
+0%, 100% {
+  transform: translateY(0);
+}
+50% {
+  transform: translateY(10px); /* Atur jarak naik turun */
+}
+}
+
+.btn-success {
+animation: move 1s ease-in-out infinite alternate;
+}
+
+.btn-success {
+color: #fff;
+padding: 10px 20px;
+border-radius: 5px;
+text-decoration: none;
+position: relative;
+overflow: hidden;
+transition: color 0.3s, background-color 0.3s;
+}
+
+.btn-success::before {
+content: "";
+position: absolute;
+top: 50%;
+left: 50%;
+width: 300%;
+height: 300%;
+transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
+border-radius: 50%;
+z-index: 0;
+transform: translate(-50%, -50%);
+}
+
+.btn-success:hover::before {
+width: 0;
+height: 0;
+top: 50%;
+left: 50%;
+}
+
+.btn-success:hover {
+color: #007bff;
+background-color: #fff;
+}
 
 /* Tujuan */
 .container-tujuan {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	flex-wrap: wrap;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
 }
 
 .container.tujuan-teks {
-    display: flex;
-    align-items: center;
-    margin-left: 20px; /* Jarak antara gambar dan teks */
+display: flex;
+align-items: center;
+margin-left: 20px; /* Jarak antara gambar dan teks */
 }
 
 @media screen and (max-width: 768px) {
-    .tujuan-teks {
-        margin-left: 3px; /* Mengurangi margin saat layar lebih kecil */
-    }
+.tujuan-teks {
+    margin-left: 3px; /* Mengurangi margin saat layar lebih kecil */
+}
 }
 
 /* Atur lebar gambar agar tetap proporsional */
 img {
-    height: auto;
-    max-width: 300px;
+height: auto;
+max-width: 300px;
 }
 
 /* Program */
 .container-program {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 10px;
+max-width: 800px;
+margin: 0 auto;
+padding: 10px;
 }
 
 .program-item {
-    padding: 20px;
-    border-radius: 5px;
-    text-align: left;
+padding: 20px;
+border-radius: 5px;
+text-align: left;
 }
 
 .program-item h3 {
-    margin-top: 0;
+margin-top: 0;
 }
 
 .program-item p {
-    margin-bottom: 0;
+margin-bottom: 0;
 }
 
 /* Kegiatan */
 .container-kegiatan {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	flex-wrap: wrap;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
 }
 
 .kegiatan-teks {
-    display: flex;
-    align-items: center;
-    margin-left: 20px; /* Jarak antara gambar dan teks */
+display: flex;
+align-items: center;
+margin-left: 20px; /* Jarak antara gambar dan teks */
 }
 
 @media screen and (max-width: 768px) {
-    .kegiatan-teks {
-        margin-left: 3px; /* Mengurangi margin saat layar lebih kecil */
-    }
+.kegiatan-teks {
+    margin-left: 3px; /* Mengurangi margin saat layar lebih kecil */
+}
 }
 
 /* Atur lebar gambar agar tetap proporsional */
 img {
-    height: auto;
-    max-width: 300px;
+height: auto;
+max-width: 300px;
 }
 
 /* Untuk layar berukuran kecil (<= 576px) */
 @media (max-width: 576px) {
-    /* Tambahkan aturan CSS untuk layar kecil di sini */
+/* Tambahkan aturan CSS untuk layar kecil di sini */
 }
 
 /* Untuk layar berukuran sedang (577px - 768px) */
 @media (min-width: 577px) and (max-width: 768px) {
-    /* Tambahkan aturan CSS untuk layar sedang di sini */
+/* Tambahkan aturan CSS untuk layar sedang di sini */
 }
 
 /* Untuk layar berukuran besar (> 768px) */
 @media (min-width: 769px) {
-    /* Tambahkan aturan CSS untuk layar besar di sini */
+/* Tambahkan aturan CSS untuk layar besar di sini */
 }
 
+/* Slideup */
+.slide-up {
+opacity: 0;
+transform: translateY(70%);
+transition: opacity 2s, transform 2s;
+}
 
+.slide-up.active {
+opacity: 1;
+transform: translateY(0);
+}
 
+@media (max-width: 768px) {
+.slide-up {
+  animation: slideUp 2s ease forwards;
+  opacity: 0;
+}
 
+@keyframes slideUp {
+  from {
+      transform: translateY(70%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+}
