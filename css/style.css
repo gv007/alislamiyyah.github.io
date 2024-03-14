@@ -201,3 +201,17 @@ max-width: 300px;
 @media (min-width: 769px) {
 /* Tambahkan aturan CSS untuk layar besar di sini */
 }
+
+#back-to-top-btn {
+  position: fixed;
+  bottom: 105px;
+  right: 10px;
+  z-index: 99;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#back-to-top-btn:hover {
+  text-decoration: none;
+}
