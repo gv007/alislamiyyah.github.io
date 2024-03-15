@@ -209,9 +209,18 @@ max-width: 300px;
   z-index: 99;
   border: none;
   cursor: pointer;
-  background-color: transparent;
+  color: #fff;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 #back-to-top-btn:hover {
   text-decoration: none;
+}
+
+#back-to-top-btn.show {
+  display: block;
+  opacity: 1;
 }
