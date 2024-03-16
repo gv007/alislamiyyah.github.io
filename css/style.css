@@ -177,25 +177,11 @@ max-width: 300px;
 /* Tambahkan aturan CSS untuk layar besar di sini */
 }
 
-#back-to-top-btn {
-position: fixed;
-bottom: 105px;
-right: 10px;
-z-index: 99;
-border: none;
-cursor: pointer;
-color: #fff;
-border-radius: 5px;
-opacity: 0;
-transition: opacity 0.3s;
-background-color: rgba(0, 0, 0, 0.3);
-}
-
-#back-to-top-btn:hover {
-text-decoration: none;
-}
-
-#back-to-top-btn.show {
-display: block;
-opacity: 1;
+@media (max-width: 576px) {
+    #typed-text {
+        font-size: 1rem; /* Sesuaikan ukuran font dengan kebutuhan */
+    }
+  .font-monospace {
+      font-size: 0.8rem; /* Sesuaikan ukuran font dengan kebutuhan */
+  }
 }
