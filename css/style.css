@@ -26,8 +26,8 @@ align-items: center;
 
 /* Pembuka */
 .card {
-  height: 100%;
-  justify-content: center;
+height: 100%;
+justify-content: center;
 }
 .teks-pembuka::before {
 content: "“";
@@ -178,10 +178,10 @@ max-width: 300px;
 }
 
 @media (max-width: 576px) {
-    #typed-text {
-        font-size: 1rem; /* Sesuaikan ukuran font dengan kebutuhan */
-    }
-  .font-monospace {
-      font-size: 0.8rem; /* Sesuaikan ukuran font dengan kebutuhan */
-  }
+#typed-text {
+font-size: 1rem; /* Sesuaikan ukuran font dengan kebutuhan */
+}
+.font-monospace {
+font-size: 0.8rem; /* Sesuaikan ukuran font dengan kebutuhan */
+}
 }
